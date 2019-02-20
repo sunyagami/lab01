@@ -1,0 +1,27 @@
+void setup()
+{
+  pinMode(9, OUTPUT);
+}
+
+void loop()
+{
+    int i,j,a;
+  for(i=0;i<3;i++)
+  {
+    if(i==1)
+      a=300;
+    else
+      a=100;
+    for(j=0;j<3;j++)
+    {
+     	digitalWrite(9, HIGH);
+  		delay(a); // Wait for 1000 millisecond(s)
+ 		digitalWrite(9, LOW);
+ 		delay(100); // Wait for 1000 millisecond(s)
+    }
+    digitalWrite(9, LOW);
+ 	delay(100); // Wait for 1000 millisecond(s)
+  }
+  digitalWrite(9, LOW);
+  delay(300); // Wait for 1000 millisecond(s)
+}
